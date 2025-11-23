@@ -16,7 +16,7 @@ class Asteroid(CircleShape):
         self.position += self.velocity * dt
 
     def split(self):
-        pygame.sprite.Sprite.kill(self)
+        self.kill()
         if self.radius <= ASTEROID_MIN_RADIUS:
             pass
         else:
